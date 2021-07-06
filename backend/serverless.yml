@@ -5,6 +5,7 @@ plugins:
   - serverless-webpack
   - serverless-iam-roles-per-function
   - serverless-reqvalidator-plugin
+  - serverless-aws-documentation
 
 custom:
   documentation:
@@ -19,7 +20,7 @@ custom:
         schema: ${file(src/models/create-todo-request.json)}
       - name: UpdateTodoRequest
         contentType: application/json
-        schema: ${file(src/models/create-todo-request.json)} 
+        schema: ${file(src/models/update-todo-request.json)} 
 
 provider:
   name: aws
@@ -31,9 +32,9 @@ provider:
   region: ${opt:region, 'us-east-2'}
 
   environment:
-    TODOS_TABLE: Todos-${self:provider.stage}
+    TODOS_TABLE: Todoss-${self:provider.stage}
     TODOS_BY_USER_INDEX: TodosByUserIndex
-    ATTACHMENTS_S3_BUCKET: gd-todos-attachments-${self:provider.stage}
+    ATTACHMENTS_S3_BUCKET: gdd-todos-attachments-${self:provider.stage}
     SIGNED_URL_EXPIRATION: 300
     AUTH_0_JWKS_URL: https://dev-kg0u67xp.eu.auth0.com/.well-known/jwks.json
 
@@ -309,4 +310,4 @@ resources:
               - 's3:GetObject'
               - 's3:PutObject'
               Resource: 'arn:aws:s3:::${self:provider.environment.ATTACHMENTS_S3_BUCKET}/*'
-        Bucket: 'gd-todos-attachments-dev'
+        Bucket: 'gdd-todos-attachments-dev'
