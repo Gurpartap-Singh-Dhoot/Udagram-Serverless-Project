@@ -76,15 +76,6 @@ To complete this exercise, please follow the best practices from the 6th lesson 
 
 The starter code comes with a configured [Winston](https://github.com/winstonjs/winston) logger that creates [JSON formatted](https://stackify.com/what-is-structured-logging-and-why-developers-need-it/) log statements. You can use it to write log messages like this:
 
-# Grading the submission
-
-Once you have finished developing your application, please set `apiId` and Auth0 parameters in the `config.ts` file in the `client` folder. A reviewer would start the React development server to run the frontend that should be configured to interact with your serverless application.
-
-**IMPORTANT**
-
-*Please leave your application running until a submission is reviewed. If implemented correctly it will cost almost nothing when your application is idle.*
-
-
 # How to run the application
 
 ## Backend
