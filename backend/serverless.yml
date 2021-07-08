@@ -36,7 +36,7 @@ provider:
     TODOS_BY_USER_INDEX: TodosByUserIndex
     ATTACHMENTS_S3_BUCKET: gdd-todos-attachments-${self:provider.stage}
     SIGNED_URL_EXPIRATION: 300
-    AUTH_0_JWKS_URL: https://dev-kg0u67xp.eu.auth0.com/.well-known/jwks.json
+    AUTH_0_JWKS_URL: abc
 
   tracing:
     lambda: true
